@@ -1,6 +1,6 @@
 ---
-- hosts: all
-  name: Install UFW
+- name: Install UFW
+  hosts: all
   become: true
   become_method: ansible.builtin.sudo
   tasks:

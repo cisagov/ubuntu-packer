@@ -1,7 +1,8 @@
 ---
-# Ensure that cloud-config is enabled and enable the others while we're at it.
-- hosts: all
-  name: Enable all cloud-init services
+# Ensure that cloud-config is enabled and enable the others while
+# we're at it.
+- name: Enable all cloud-init services
+  hosts: all
   become: true
   become_method: ansible.builtin.sudo
   tasks:
