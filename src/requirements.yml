@@ -1,7 +1,6 @@
 ---
 - name: amazon_efs_utils
   src: https://github.com/cisagov/ansible-role-amazon-efs-utils
-  version: bugfix/use-old-version-for-jammy
 - name: automated_security_updates
   src: https://github.com/cisagov/ansible-role-automated-security-updates
 - name: banner
