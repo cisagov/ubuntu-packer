@@ -25,6 +25,10 @@
   src: https://github.com/cisagov/ansible-role-python
 - name: remove_python2
   src: https://github.com/cisagov/ansible-role-remove-python2
+# TODO: Enable support for systemd-resolved once we move to Ubuntu
+# 24.04.  See issue #25 for more details.
+# - name: systemd_resolved
+#   src: https://github.com/cisagov/ansible-role-systemd-resolved
 - name: ufw
   src: https://github.com/cisagov/ansible-role-ufw
 - name: upgrade
