@@ -3,7 +3,7 @@
 [![GitHub Build Status](https://github.com/cisagov/ubuntu-server-packer/workflows/build/badge.svg)](https://github.com/cisagov/ubuntu-server-packer/actions)
 
 This project can be used to build an
-[Ubuntu Server 22.04 (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/) AMI.
+[Ubuntu Server 24.04 (Noble Numbat)](https://releases.ubuntu.com/noble/) AMI.
 
 ## Pre-requisites ##
 
