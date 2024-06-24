@@ -63,9 +63,9 @@ variable "skip_create_ami" {
   type        = bool
 }
 
-data "amazon-ami" "ubuntu_server_jammy" {
+data "amazon-ami" "ubuntu_server_noble" {
   filters = {
-    name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
+    name                = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server*"
     root-device-type    = "ebs"
     virtualization-type = "hvm"
   }
@@ -93,7 +93,7 @@ source "amazon-ebs" "ubuntu_server" {
   region             = var.build_region
   region_kms_key_ids = var.region_kms_keys
   skip_create_ami    = var.skip_create_ami
-  source_ami         = data.amazon-ami.ubuntu_server_jammy.id
+  source_ami         = data.amazon-ami.ubuntu_server_noble.id
   ssh_username       = "ubuntu"
   subnet_filter {
     filters = {
@@ -102,9 +102,9 @@ source "amazon-ebs" "ubuntu_server" {
   }
   tags = {
     Application        = "Ubuntu Server"
-    Base_AMI_Name      = data.amazon-ami.ubuntu_server_jammy.name
+    Base_AMI_Name      = data.amazon-ami.ubuntu_server_noble.name
     GitHub_Release_URL = var.release_url
-    OS_Version         = "Ubuntu Jammy Jellyfish"
+    OS_Version         = "Ubuntu Noble Numbat"
     Pre_Release        = var.is_prerelease
     Release            = var.release_tag
     Team               = "VM Fusion - Development"
