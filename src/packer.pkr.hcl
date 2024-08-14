@@ -107,7 +107,7 @@ source "amazon-ebs" "arm64" {
   region_kms_key_ids = var.region_kms_keys
   skip_create_ami    = var.skip_create_ami
   source_ami         = data.amazon-ami.ubuntu_server_noble_arm64.id
-  ssh_username       = "admin"
+  ssh_username       = "ubuntu"
   subnet_filter {
     filters = {
       "tag:Name" = "AMI Build"
