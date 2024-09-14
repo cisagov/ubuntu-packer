@@ -12,10 +12,9 @@
         # instances.  This helps us avoid UID/GID collisions with
         # files written to the EFS share.
         amazon_efs_utils_efs_users_gid: 2048
-    # Note that Amazon SSM Agent is already present in the source AMI,
-    # so it does not need to be installed again.
-    # For more info, see
-    # https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-ubuntu-about-v16.html
+    - name: Install Amazon SSM Agent
+      ansible.builtin.include_role:
+        name: amazon_ssm_agent
     - name: Install chrony and configure it for use within AWS
       ansible.builtin.include_role:
         name: chrony_aws

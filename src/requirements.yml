@@ -1,4 +1,6 @@
 ---
+- name: amazon_ssm_agent
+  src: https://github.com/cisagov/ansible-role-amazon-ssm-agent
 - name: amazon_efs_utils
   src: https://github.com/cisagov/ansible-role-amazon-efs-utils
 - name: automated_security_updates
