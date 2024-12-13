@@ -1,4 +1,4 @@
-#!/bin/env bash
+# shellcheck shell=bash
 
 set -o nounset
 set -o errexit
