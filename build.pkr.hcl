@@ -31,7 +31,7 @@ build {
 
   provisioner "shell" {
     execute_command = "chmod +x {{ .Path }}; sudo env {{ .Vars }} bash {{ .Path }} ; rm -f {{ .Path }}"
-    script          = "ansible/post_setup.sh"
+    script          = "post_setup.sh"
     skip_clean      = true
   }
 
