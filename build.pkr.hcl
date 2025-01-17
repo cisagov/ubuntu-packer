@@ -4,8 +4,8 @@ build {
     "source.amazon-ebs.x86_64",
   ]
 
-  # We are adding this to avoid the failure to install aptitude during build time
-  # Issue #12 has been created for this.
+  # The following provisioner was added to avoid sporadic aptitude install failures
+  # at build time.  See issue #12 for details.
   provisioner "shell" {
     inline = ["sudo apt-get update"]
   }
